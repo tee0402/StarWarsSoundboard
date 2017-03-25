@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Star Wars Soundboard</string>
+    <string name="button_liar">Liar</string>
+    <string name="button_i_love_you">I love you</string>
+    <string name="button_youre_with_him_you_brought_him_here_to_kill_me">You\'re with him, you brought him here to kill me</string>
+    <string name="button_let_her_go_anakin">Let her go Anakin</string>
+    <string name="button_let_her_go">Let her go</string>
+    <string name="button_gasp">*Gasp*</string>
+    <string name="button_you_turned_her_against_me">You turned her against me</string>
+    <string name="button_you_have_done_that_yourself">You have done that yourself</string>
+    <string name="button_you_will_not_take_her_from_me">You will not take her from me</string>
+    <string name="button_your_anger_and_your_lust_for_power_have_already_done_that">Your anger and your lust for power have already done that</string>
+    <string name="button_you_have_allowed_this_dark_lord_to_twist_your_mind_until_now">You have allowed this dark lord to twist your mind until now, until now you have become the very thing you swore to destroy</string>
+    <string name="button_dont_lecture_me_obi_wan">Don\'t lecture me Obi-Wan</string>
+    <string name="button_i_see_through_the_lies_of_the_jedi">I see through the lies of the Jedi</string>
+    <string name="button_i_do_not_fear_the_dark_side_as_you_do">I do not fear the dark side as you do</string>
+    <string name="button_i_have_brought_peace_freedom_justice_and_security_to_my_new_empire">I have brought peace, freedom, justice, and security to my new Empire</string>
+    <string name="button_your_new_empire">Your new Empire?</string>
+    <string name="button_dont_make_me_kill_you">Don\'t make me kill you</string>
+    <string name="button_anakin_my_allegiance_is_to_the_republic_to_democracy">Anakin, my allegiance is to the Republic, to democracy!</string>
+    <string name="button_if_youre_not_with_me_then_youre_my_enemy">If you\'re not with me, then you\'re my enemy</string>
+    <string name="button_only_a_sith_deals_in_absolutes">Only a Sith deals in absolutes</string>
+    <string name="button_i_will_do_what_i_must">I will do what I must</string>
+    <string name="button_you_will_try">You will try</string>
+</resources>
