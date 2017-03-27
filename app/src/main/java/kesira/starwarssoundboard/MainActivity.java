@@ -60,7 +60,7 @@ public class MainActivity extends AppCompatActivity {
             mFragmentList.add(fragment);
             mFragmentTitleList.add(title);
         }
-        
+
         @Override
         public Fragment getItem(int position) {
             return mFragmentList.get(position);

@@ -1,6 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</LinearLayout>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp">
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="11dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="did_you_ever_hear_the_tragedy_of_darth_plagueis_the_wise"
+            android:text="@string/button_did_you_ever_hear_the_tragedy_of_darth_plagueis_the_wise"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="i_thought_not_its_not_a_story_the_jedi_would_tell_you"
+            android:text="@string/button_i_thought_not_its_not_a_story_the_jedi_would_tell_you"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="its_a_sith_legend"
+            android:text="@string/button_its_a_sith_legend"
+            android:textAllCaps="false"
+            android:textSize="18sp"  />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="darth_plagueis_was_a_dark_lord_of_the_sith_so_powerful_and_so_wise_he_could_use_the_force"
+            android:text="@string/button_darth_plagueis_was_a_dark_lord_of_the_sith_so_powerful_and_so_wise_he_could_use_the_force"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="he_had_such_a_knowledge_of_the_dark_side_he_could_even_keep_the_ones_he_cared_about_from_dying"
+            android:text="@string/button_he_had_such_a_knowledge_of_the_dark_side_he_could_even_keep_the_ones_he_cared_about_from_dying"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="he_could_actually_save_people_from_death"
+            android:text="@string/button_he_could_actually_save_people_from_death"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="the_dark_side_of_the_force_is_a_pathway_to_many_abilities_some_consider_to_be_unnatural"
+            android:text="@string/button_the_dark_side_of_the_force_is_a_pathway_to_many_abilities_some_consider_to_be_unnatural"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="what_happened_to_him"
+            android:text="@string/button_what_happened_to_him"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="he_became_so_powerful_that_the_only_thing_he_was_afraid_of_was_losing_his_power"
+            android:text="@string/button_he_became_so_powerful_that_the_only_thing_he_was_afraid_of_was_losing_his_power"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="unfortunately_he_taught_his_apprentice_everything_he_knew"
+            android:text="@string/button_unfortunately_he_taught_his_apprentice_everything_he_knew"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="ironic"
+            android:text="@string/button_ironic"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button12"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="he_could_save_others_from_death_but_not_himself"
+            android:text="@string/button_he_could_save_others_from_death_but_not_himself"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button13"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="is_it_possible_to_learn_this_power"
+            android:text="@string/button_is_it_possible_to_learn_this_power"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button14"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="not_from_a_jedi"
+            android:text="@string/button_not_from_a_jedi"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+</ScrollView>
