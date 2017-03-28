@@ -44,7 +44,8 @@ public class MainActivity extends AppCompatActivity {
         adapter.addFragment(new OneFragment(), "Obi-Wan and Anakin vs. Count Dooku");
         adapter.addFragment(new TwoFragment(), "Tragedy of Darth Plagueis");
         adapter.addFragment(new ThreeFragment(), "Palpatine Reveals Himself");
-        adapter.addFragment(new FourFragment(), "Anakin vs. Obi-Wan");
+        adapter.addFragment(new FourFragment(), "Mace Windu vs. Palpatine");
+        adapter.addFragment(new FiveFragment(), "Anakin vs. Obi-Wan");
         viewPager.setAdapter(adapter);
     }
 

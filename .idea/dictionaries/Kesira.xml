@@ -2,10 +2,13 @@
   <dictionary name="Kesira">
     <words>
       <w>anakin</w>
+      <w>dooku</w>
       <w>kenobi</w>
       <w>palpatine</w>
+      <w>plagueis</w>
       <w>sith</w>
       <w>skywalker</w>
+      <w>windu</w>
     </words>
   </dictionary>
 </component>
