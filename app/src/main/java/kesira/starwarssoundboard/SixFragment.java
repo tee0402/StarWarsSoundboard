@@ -7,9 +7,9 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 
-public class OneFragment extends Fragment {
+public class SixFragment extends Fragment {
 
-    public OneFragment() {
+    public SixFragment() {
 
     }
 
@@ -20,8 +20,8 @@ public class OneFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_one, container, false);
-        for (int i = 1; i <= 23; i++) {
+        View v = inflater.inflate(R.layout.fragment_six, container, false);
+        for (int i = 1; i <= 22; i++) {
             Button b = (Button) v.findViewById((getResources().getIdentifier("button" + i, "id",
                     v.getContext().getPackageName())));
             registerForContextMenu(b);

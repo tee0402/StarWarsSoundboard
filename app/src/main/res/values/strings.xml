@@ -1,5 +1,7 @@
 <resources>
     <string name="app_name">Star Wars Soundboard</string>
+    <string name="context_menu_item1">Save as favorite</string>
+    <string name="context_menu_item2">Remove from favorites</string>
     <string name="button_get_help_youre_no_match_for_him_hes_a_sith_lord">Get help, you\'re no match for him, he\'s a Sith Lord!</string>
     <string name="button_chancellor_palpatine_sith_lords_are_our_speciality">Chancellor Palpatine, Sith Lords are our speciality</string>
     <string name="button_your_swords_please_we_dont_want_to_make_a_mess_of_things_in_front_of_the_chancellor">Your swords, please, we don\'t want to make a mess of things in front of the Chancellor</string>
@@ -7,7 +9,7 @@
     <string name="button_my_powers_have_doubled_since_the_last_time_we_met_count">My powers have doubled since the last time we met, Count</string>
     <string name="button_good_twice_the_pride_double_the_fall">Good, twice the pride, double the fall</string>
     <string name="button_yeah">Yeah</string>
-    <string name="button_i_sense_great_fear_in_you_skywalker">I sense great fear in you Skywalker</string>
+    <string name="button_i_sense_great_fear_in_you_skywalker">I sense great fear in you, Skywalker</string>
     <string name="button_you_have_hate_you_have_anger_but_you_dont_use_them">You have hate, you have anger, but you don\'t use them</string>
     <string name="button_good_anakin_good">Good, Anakin, good</string>
     <string name="button_kill_him_kill_him_now">Kill him, kill him now</string>
@@ -37,6 +39,32 @@
     <string name="button_he_could_save_others_from_death_but_not_himself">He could save others from death, but not himself</string>
     <string name="button_is_it_possible_to_learn_this_power">Is it possible to learn this power?</string>
     <string name="button_not_from_a_jedi">Not from a Jedi</string>
+    <string name="button_greetings_young_jedi">Greetings, young Jedi</string>
+    <string name="button_what_brings_you_to_our_remote_sanctuary">What brings you to our remote sanctuary?</string>
+    <string name="button_theres_no_war_here_unless_you_brought_it_with_you">There\'s no war here, unless you brought it with you</string>
+    <string name="button_alien_vietnamese">*Alien Vietnamese*</string>
+    <string name="button_he_is_here_we_are_being_held_hostage">He is here, we are being held hostage</string>
+    <string name="button_they_are_watching_us">They are watching us</string>
+    <string name="button_i_understand">I understand</string>
+    <string name="button_tenth_level_thousands_of_battle_droids">Tenth level, thousands of battle droids</string>
+    <string name="button_tell_your_people_to_take_shelter_if_you_have_warriors_now_is_the_time">Tell your people to take shelter, if you have warriors, now is the time</string>
+    <string name="button_is_he_bringing_additional_warriors_he_didnt_say">Is he bringing additional warriors? He didn\'t say</string>
+    <string name="button_i_am_sending_you_to_the_mustafar_system_in_the_outer_rim">I am sending you to the Mustafar system in the Outer Rim</string>
+    <string name="button_it_is_a_volcanic_planet_you_will_be_safe_there">It is a volcanic planet, you will be safe there</string>
+    <string name="button_safe_chancellor_palpatine_managed_to_escape_your_grip_general">Safe? Chancellor Palpatine managed to escape your grip, General, without Count Dooku I have doubts about your ability to keep us safe</string>
+    <string name="button_be_thankful_viceroy_you_have_not_found_yourself_in_my_grip">Be thankful, Viceroy, you have not found yourself in my grip</string>
+    <string name="button_your_ship_is_waiting">Your ship is waiting</string>
+    <string name="button_hello_there">Hello there</string>
+    <string name="button_general_kenobi_you_are_a_bold_one">General Kenobi, you are a bold one</string>
+    <string name="button_grievous_laughs">*Grievous laughs*</string>
+    <string name="button_back_away">Back away!</string>
+    <string name="button_i_will_deal_with_this_jedi_slime_myself">I will deal with this Jedi slime, myself</string>
+    <string name="button_your_move">Your move</string>
+    <string name="button_you_fool_ive_been_trained_in_your_jedi_arts_by_count_dooku">You fool! I\'ve been trained in your Jedi arts by Count Dooku</string>
+    <string name="button_attack_kenobi">Attack, Kenobi</string>
+    <string name="button_autistic_whirling">*Autistic whirling*</string>
+    <string name="button_army_or_not_you_must_realize_you_are_doomed">Army or not, you must realize, you are doomed</string>
+    <string name="button_oh_i_dont_think_so">Oh, I don\'t think so</string>
     <string name="button_chancellor">Chancellor</string>
     <string name="button_we_may_hope_that_master_kenobi_is_up_to_the_challenge">We may hope that Master Kenobi is up to the challenge</string>
     <string name="button_i_should_be_there_with_him">I should be there with him</string>
@@ -111,6 +139,7 @@
     <string name="button_i_need_him">I need him</string>
     <string name="button_power_unlimited_power">Power! Unlimited power!</string>
     <string name="button_ahhhhhhh">Ahhhhhhh</string>
+    <string name="button_what_have_i_done">What have I done?</string>
     <string name="button_come_my_apprentice_learn_to_use_the_dark_side_of_the_force">Come, my apprentice, learn to use the dark side of the Force</string>
     <string name="button_i_will_do_whatever_you_ask">I will do whatever you ask</string>
     <string name="button_good">Good</string>
@@ -121,7 +150,6 @@
     <string name="button_the_force_is_strong_with_you">The Force is strong with you</string>
     <string name="button_a_powerful_sith_you_will_become">A powerful Sith you will become</string>
     <string name="button_henceforth_you_shall_be_known_as_darth_vader">Henceforth, you shall be known as Darth Vader</string>
-    <string name="button_what_have_i_done">What have I done?</string>
     <string name="button_i_love_you">I love you</string>
     <string name="button_liar">Liar</string>
     <string name="button_youre_with_him_you_brought_him_here_to_kill_me">You\'re with him, you brought him here to kill me</string>
