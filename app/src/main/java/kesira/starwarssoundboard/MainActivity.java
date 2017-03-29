@@ -14,16 +14,20 @@ import android.view.ContextMenu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
 import android.widget.Button;
 
+import java.io.BufferedReader;
 import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity{
 
-    private String bTag;
+    public String bTag;
+    public ArrayList<String> favorites = new ArrayList<>();
+    private ViewPagerAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +39,22 @@ public class MainActivity extends AppCompatActivity{
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        try {
+            InputStream inputStream = this.openFileInput("favorites.txt");
+            if (inputStream != null) {
+                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
+                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
+                String str;
+                while ((str = bufferedReader.readLine()) != null) {
+                    favorites.add(str);
+                }
+                inputStream.close();
+            }
+        }
+        catch (IOException e) {
+            Log.e("Exception", "Reading from saved favorites failed: " + e.toString());
+        }
     }
 
     @Override
@@ -47,28 +67,29 @@ public class MainActivity extends AppCompatActivity{
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.save) {
-            saveFavorite(bTag);
+        if (item.getItemId() == R.id.save && !favorites.contains(bTag)) {
+            favorites.add(bTag);
         }
         else if (item.getItemId() == R.id.remove) {
-            removeFavorite(bTag);
+            favorites.remove(bTag);
         }
+        adapter.notifyDataSetChanged();
         return true;
     }
 
-    public void saveFavorite(String viewTag) {
+    @Override
+    protected void onPause() {
+        super.onPause();
         try {
             OutputStreamWriter outputStreamWriter = new OutputStreamWriter(this.openFileOutput("favorites.txt", Context.MODE_PRIVATE));
-            outputStreamWriter.write(viewTag);
+            for (int i = 0; i < favorites.size(); i++) {
+                outputStreamWriter.write(favorites.get(i) + "\n");
+            }
             outputStreamWriter.close();
         }
         catch (IOException e) {
-            Log.e("Exception", "File write failed: " + e.toString());
+            Log.e("Exception", "Writing to saved favorites failed: " + e.toString());
         }
-    }
-
-    public void removeFavorite(String viewTag) {
-
     }
 
     public void playSound(View v) {
@@ -85,7 +106,7 @@ public class MainActivity extends AppCompatActivity{
     }
 
     private void setupViewPager(ViewPager viewPager) {
-        ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
+        adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new FavoritesFragment(), "Favorites");
         adapter.addFragment(new OneFragment(), "Obi-Wan and Anakin vs. Dooku");
         adapter.addFragment(new TwoFragment(), "Tragedy of Darth Plagueis");
@@ -125,9 +146,8 @@ public class MainActivity extends AppCompatActivity{
         }
 
         @Override
-        public Object instantiateItem(ViewGroup container, int position) {
-
-            return super.instantiateItem(container, position);
+        public int getItemPosition(Object o) {
+            return POSITION_NONE;
         }
     }
 }
