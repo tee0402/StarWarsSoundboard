@@ -61,13 +61,13 @@ public class MainActivity extends AppCompatActivity{
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         super.onCreateContextMenu(menu, v, menuInfo);
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.context_menu_save, menu);
+        inflater.inflate(R.menu.context_menu_add, menu);
         bTag = v.getTag().toString();
     }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.save && !favorites.contains(bTag)) {
+        if (item.getItemId() == R.id.add && !favorites.contains(bTag)) {
             favorites.add(bTag);
         }
         else if (item.getItemId() == R.id.remove) {

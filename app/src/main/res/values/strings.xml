@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Star Wars Soundboard</string>
-    <string name="context_menu_item1">Save as favorite</string>
+    <string name="context_menu_item1">Add to favorites</string>
     <string name="context_menu_item2">Remove from favorites</string>
     <string name="button_get_help_youre_no_match_for_him_hes_a_sith_lord">Get help, you\'re no match for him, he\'s a Sith Lord!</string>
     <string name="button_chancellor_palpatine_sith_lords_are_our_speciality">Chancellor Palpatine, Sith Lords are our speciality</string>
