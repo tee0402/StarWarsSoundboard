@@ -270,10 +270,142 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="11dp"
+            android:layout_marginBottom="5dp"
             android:onClick="playSound"
             android:tag="you_will_try"
             android:text="@string/button_you_will_try"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button23"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="its_over_anakin"
+            android:text="@string/button_its_over_anakin"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button24"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="i_have_the_high_ground"
+            android:text="@string/button_i_have_the_high_ground"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button25"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="you_underestimate_my_power"
+            android:text="@string/button_you_underestimate_my_power"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button26"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="dont_try_it"
+            android:text="@string/button_dont_try_it"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button27"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="you_were_the_chosen_one"
+            android:text="@string/button_you_were_the_chosen_one"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button28"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="it_was_said_that_you_would_destroy_the_sith_not_join_them"
+            android:text="@string/button_it_was_said_that_you_would_destroy_the_sith_not_join_them"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button29"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="bring_balance_to_the_force_not_leave_it_in_darkness"
+            android:text="@string/button_bring_balance_to_the_force_not_leave_it_in_darkness"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="i_hate_you"
+            android:text="@string/button_i_hate_you"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="you_were_my_brother_anakin"
+            android:text="@string/button_you_were_my_brother_anakin"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button32"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="i_loved_you"
+            android:text="@string/button_i_loved_you"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button33"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="11dp"
+            android:onClick="playSound"
+            android:tag="anakin_screams"
+            android:text="@string/button_anakin_screams"
             android:textAllCaps="false"
             android:textSize="18sp" />
 

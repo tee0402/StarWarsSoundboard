@@ -172,4 +172,15 @@
     <string name="button_only_a_sith_deals_in_absolutes">Only a Sith deals in absolutes</string>
     <string name="button_i_will_do_what_i_must">I will do what I must</string>
     <string name="button_you_will_try">You will try</string>
+    <string name="button_its_over_anakin">It\'s over Anakin!</string>
+    <string name="button_i_have_the_high_ground">I have the high ground</string>
+    <string name="button_you_underestimate_my_power">You underestimate my power</string>
+    <string name="button_dont_try_it">Don\'t try it</string>
+    <string name="button_you_were_the_chosen_one">You were the chosen one!</string>
+    <string name="button_it_was_said_that_you_would_destroy_the_sith_not_join_them">It was said that you would destroy the Sith, not join them!</string>
+    <string name="button_bring_balance_to_the_force_not_leave_it_in_darkness">Bring balance to the Force, not leave it in darkness!</string>
+    <string name="button_i_hate_you">I hate you!</string>
+    <string name="button_you_were_my_brother_anakin">You were my brother, Anakin!</string>
+    <string name="button_i_loved_you">I loved you!</string>
+    <string name="button_anakin_screams">*Anakin screams*</string>
 </resources>
