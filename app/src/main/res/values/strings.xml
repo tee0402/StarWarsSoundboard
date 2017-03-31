@@ -150,6 +150,14 @@
     <string name="button_the_force_is_strong_with_you">The Force is strong with you</string>
     <string name="button_a_powerful_sith_you_will_become">A powerful Sith you will become</string>
     <string name="button_henceforth_you_shall_be_known_as_darth_vader">Henceforth, you shall be known as Darth Vader</string>
+    <string name="button_welcome_lord_vader_weve_been_expecting_you">Welcome, Lord Vader, we\'ve been expecting you</string>
+    <string name="button_the_attempt_on_my_life_has_left_me_scarred_and_deformed">The attempt on my life has left me scarred and deformed</string>
+    <string name="button_but_i_assure_you_my_resolve_has_never_been_stronger">But I assure you my resolve has never been stronger</string>
+    <string name="button_no_nooooooo">No, nooooooo</string>
+    <string name="button_in_order_to_ensure_the_security_and_continuing_stability">In order to ensure the security and continuing stability, the Republic will be reorganized into the First Galactic Empire</string>
+    <string name="button_for_a_safe_and_secure_society">For a safe and secure society</string>
+    <string name="button_so_this_is_how_liberty_dies_with_thunderous_applause">So this is how liberty dies…with thunderous applause</string>
+    <string name="button_the_war_is_over_lord_sidious_promised_us_peace_we_only_want_ahhhhhhh">The war is over, Lord Sidious promised us peace, we only want…ahhhhhhh</string>
     <string name="button_i_love_you">I love you</string>
     <string name="button_liar">Liar</string>
     <string name="button_youre_with_him_you_brought_him_here_to_kill_me">You\'re with him, you brought him here to kill me</string>
@@ -183,4 +191,6 @@
     <string name="button_you_were_my_brother_anakin">You were my brother, Anakin!</string>
     <string name="button_i_loved_you">I loved you!</string>
     <string name="button_anakin_screams">*Anakin screams*</string>
+    <string name="button_a_surprise_to_be_sure_but_a_welcome_one">A surprise, to be sure, but a welcome one</string>
+    <string name="button_magnificent_arent_they">Magnificent, aren\'t they?</string>
 </resources>

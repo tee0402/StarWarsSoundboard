@@ -113,7 +113,9 @@ public class MainActivity extends AppCompatActivity{
         adapter.addFragment(new ThreeFragment(), "Utapau");
         adapter.addFragment(new FourFragment(), "Palpatine Reveals Himself");
         adapter.addFragment(new FiveFragment(), "Mace Windu vs. Palpatine");
-        adapter.addFragment(new SixFragment(), "Anakin vs. Obi-Wan");
+        adapter.addFragment(new SixFragment(), "Mustafar and Palpatine's Speech");
+        adapter.addFragment(new SevenFragment(), "Anakin vs. Obi-Wan");
+        adapter.addFragment(new EightFragment(), "Others");
         viewPager.setAdapter(adapter);
     }
 
