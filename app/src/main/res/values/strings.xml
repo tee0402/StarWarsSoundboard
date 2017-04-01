@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Star Wars Soundboard</string>
+    <string name="button_main_menu_item1">Episode I - The Phantom Menace</string>
+    <string name="button_main_menu_item2">Episode II - Attack of the Clones</string>
+    <string name="button_main_menu_item3">Episode III - Revenge of the Sith</string>
     <string name="context_menu_item1">Add to favorites</string>
     <string name="context_menu_item2">Remove from favorites</string>
     <string name="button_get_help_youre_no_match_for_him_hes_a_sith_lord">Get help, you\'re no match for him, he\'s a Sith Lord!</string>
