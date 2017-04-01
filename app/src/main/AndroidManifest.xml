@@ -8,7 +8,8 @@
         android:icon="@mipmap/emperor_icon"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:fullBackupContent="">
+        android:fullBackupContent=""
+        tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".MainMenuActivity"
             android:theme="@style/AppThemeBar">
             <intent-filter>
