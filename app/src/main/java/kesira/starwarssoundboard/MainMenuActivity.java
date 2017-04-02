@@ -4,8 +4,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.GridView;
+
+import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
 
 public class MainMenuActivity extends AppCompatActivity {
 
@@ -33,5 +37,9 @@ public class MainMenuActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        Animation anim = AnimationUtils.loadAnimation(this, R.anim.anim_fly_in);
+        gridview.setAnimation(anim);
+        anim.start();
     }
 }
