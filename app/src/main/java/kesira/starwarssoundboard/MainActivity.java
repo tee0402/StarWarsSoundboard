@@ -109,13 +109,14 @@ public class MainActivity extends AppCompatActivity{
         adapter = new ViewPagerAdapter(getSupportFragmentManager());
         adapter.addFragment(new FavoritesFragment(), "Favorites");
         adapter.addFragment(new OneFragment(), "Obi-Wan and Anakin vs. Dooku");
-        adapter.addFragment(new TwoFragment(), "Tragedy of Darth Plagueis");
-        adapter.addFragment(new ThreeFragment(), "Utapau");
-        adapter.addFragment(new FourFragment(), "Palpatine Reveals Himself");
-        adapter.addFragment(new FiveFragment(), "Mace Windu vs. Palpatine");
-        adapter.addFragment(new SixFragment(), "Mustafar and Palpatine's Speech");
-        adapter.addFragment(new SevenFragment(), "Anakin vs. Obi-Wan");
-        adapter.addFragment(new EightFragment(), "Others");
+        adapter.addFragment(new TwoFragment(), "Grievous' Ship");
+        adapter.addFragment(new ThreeFragment(), "Tragedy of Darth Plagueis");
+        adapter.addFragment(new FourFragment(), "Utapau");
+        adapter.addFragment(new FiveFragment(), "Palpatine Reveals Himself");
+        adapter.addFragment(new SixFragment(), "Mace Windu vs. Palpatine");
+        adapter.addFragment(new SevenFragment(), "Mustafar and Palpatine's Speech");
+        adapter.addFragment(new EightFragment(), "Anakin vs. Obi-Wan");
+        adapter.addFragment(new NineFragment(), "Others");
         viewPager.setAdapter(adapter);
     }
 

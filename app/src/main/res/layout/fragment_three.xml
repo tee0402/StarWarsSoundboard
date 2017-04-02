@@ -20,8 +20,8 @@
             android:layout_marginTop="11dp"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="greetings_young_jedi"
-            android:text="@string/button_greetings_young_jedi"
+            android:tag="did_you_ever_hear_the_tragedy_of_darth_plagueis_the_wise"
+            android:text="@string/button_did_you_ever_hear_the_tragedy_of_darth_plagueis_the_wise"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -32,8 +32,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="what_brings_you_to_our_remote_sanctuary"
-            android:text="@string/button_what_brings_you_to_our_remote_sanctuary"
+            android:tag="i_thought_not_its_not_a_story_the_jedi_would_tell_you"
+            android:text="@string/button_i_thought_not_its_not_a_story_the_jedi_would_tell_you"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -44,8 +44,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="theres_no_war_here_unless_you_brought_it_with_you"
-            android:text="@string/button_theres_no_war_here_unless_you_brought_it_with_you"
+            android:tag="its_a_sith_legend"
+            android:text="@string/button_its_a_sith_legend"
             android:textAllCaps="false"
             android:textSize="18sp"  />
 
@@ -56,8 +56,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="alien_vietnamese"
-            android:text="@string/button_alien_vietnamese"
+            android:tag="darth_plagueis_was_a_dark_lord_of_the_sith_so_powerful_and_so_wise_he_could_use_the_force"
+            android:text="@string/button_darth_plagueis_was_a_dark_lord_of_the_sith_so_powerful_and_so_wise_he_could_use_the_force"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -68,8 +68,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="he_is_here_we_are_being_held_hostage"
-            android:text="@string/button_he_is_here_we_are_being_held_hostage"
+            android:tag="he_had_such_a_knowledge_of_the_dark_side_he_could_even_keep_the_ones_he_cared_about_from_dying"
+            android:text="@string/button_he_had_such_a_knowledge_of_the_dark_side_he_could_even_keep_the_ones_he_cared_about_from_dying"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -80,8 +80,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="they_are_watching_us"
-            android:text="@string/button_they_are_watching_us"
+            android:tag="he_could_actually_save_people_from_death"
+            android:text="@string/button_he_could_actually_save_people_from_death"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -92,8 +92,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="i_understand"
-            android:text="@string/button_i_understand"
+            android:tag="the_dark_side_of_the_force_is_a_pathway_to_many_abilities_some_consider_to_be_unnatural"
+            android:text="@string/button_the_dark_side_of_the_force_is_a_pathway_to_many_abilities_some_consider_to_be_unnatural"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -104,8 +104,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="tenth_level_thousands_of_battle_droids"
-            android:text="@string/button_tenth_level_thousands_of_battle_droids"
+            android:tag="what_happened_to_him"
+            android:text="@string/button_what_happened_to_him"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -116,8 +116,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="tell_your_people_to_take_shelter_if_you_have_warriors_now_is_the_time"
-            android:text="@string/button_tell_your_people_to_take_shelter_if_you_have_warriors_now_is_the_time"
+            android:tag="he_became_so_powerful_the_only_thing_he_was_afraid_of_was_losing_his_power"
+            android:text="@string/button_he_became_so_powerful_the_only_thing_he_was_afraid_of_was_losing_his_power"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -128,8 +128,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="is_he_bringing_additional_warriors_he_didnt_say"
-            android:text="@string/button_is_he_bringing_additional_warriors_he_didnt_say"
+            android:tag="unfortunately_he_taught_his_apprentice_everything_he_knew"
+            android:text="@string/button_unfortunately_he_taught_his_apprentice_everything_he_knew"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -140,8 +140,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="i_am_sending_you_to_the_mustafar_system_in_the_outer_rim"
-            android:text="@string/button_i_am_sending_you_to_the_mustafar_system_in_the_outer_rim"
+            android:tag="ironic"
+            android:text="@string/button_ironic"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -152,8 +152,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="it_is_a_volcanic_planet_you_will_be_safe_there"
-            android:text="@string/button_it_is_a_volcanic_planet_you_will_be_safe_there"
+            android:tag="he_could_save_others_from_death_but_not_himself"
+            android:text="@string/button_he_could_save_others_from_death_but_not_himself"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -164,8 +164,8 @@
             android:layout_weight="1"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
-            android:tag="safe_chancellor_palpatine_managed_to_escape_your_grip_general"
-            android:text="@string/button_safe_chancellor_palpatine_managed_to_escape_your_grip_general"
+            android:tag="is_it_possible_to_learn_this_power"
+            android:text="@string/button_is_it_possible_to_learn_this_power"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
@@ -174,154 +174,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="be_thankful_viceroy_you_have_not_found_yourself_in_my_grip"
-            android:text="@string/button_be_thankful_viceroy_you_have_not_found_yourself_in_my_grip"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="your_ship_is_waiting"
-            android:text="@string/button_your_ship_is_waiting"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button16"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="hello_there"
-            android:text="@string/button_hello_there"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button17"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="general_kenobi_you_are_a_bold_one"
-            android:text="@string/button_general_kenobi_you_are_a_bold_one"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button18"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="grievous_laughs"
-            android:text="@string/button_grievous_laughs"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button19"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="back_away"
-            android:text="@string/button_back_away"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button20"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="i_will_deal_with_this_jedi_slime_myself"
-            android:text="@string/button_i_will_deal_with_this_jedi_slime_myself"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button21"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="your_move"
-            android:text="@string/button_your_move"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button22"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="you_fool_ive_been_trained_in_your_jedi_arts_by_count_dooku"
-            android:text="@string/button_you_fool_ive_been_trained_in_your_jedi_arts_by_count_dooku"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button23"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="attack_kenobi"
-            android:text="@string/button_attack_kenobi"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button24"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="autistic_whirling"
-            android:text="@string/button_autistic_whirling"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button25"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginBottom="5dp"
-            android:onClick="playSound"
-            android:tag="army_or_not_you_must_realize_you_are_doomed"
-            android:text="@string/button_army_or_not_you_must_realize_you_are_doomed"
-            android:textAllCaps="false"
-            android:textSize="18sp" />
-
-        <Button
-            android:id="@+id/button26"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginBottom="11dp"
             android:onClick="playSound"
-            android:tag="oh_i_dont_think_so"
-            android:text="@string/button_oh_i_dont_think_so"
+            android:tag="not_from_a_jedi"
+            android:text="@string/button_not_from_a_jedi"
             android:textAllCaps="false"
             android:textSize="18sp" />
 
