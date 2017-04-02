@@ -9,8 +9,6 @@ import android.view.animation.AnimationUtils;
 import android.widget.AdapterView;
 import android.widget.GridView;
 
-import com.yarolegovich.slidingrootnav.SlidingRootNavBuilder;
-
 public class MainMenuActivity extends AppCompatActivity {
 
     @Override
