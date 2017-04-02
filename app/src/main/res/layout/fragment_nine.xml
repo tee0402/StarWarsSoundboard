@@ -30,10 +30,70 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="11dp"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="wow_what_do_you_know"
+            android:text="@string/button_wow_what_do_you_know"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
             android:onClick="playSound"
             android:tag="magnificent_arent_they"
             android:text="@string/button_magnificent_arent_they"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="it_is_with_great_reluctance_that_i_have_agreed_to_this_calling"
+            android:text="@string/button_it_is_with_great_reluctance_that_i_have_agreed_to_this_calling"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="this_is_where_the_fun_begins"
+            android:text="@string/button_this_is_where_the_fun_begins"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="5dp"
+            android:onClick="playSound"
+            android:tag="the_time_has_come"
+            android:text="@string/button_the_time_has_come"
+            android:textAllCaps="false"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button7"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="11dp"
+            android:onClick="playSound"
+            android:tag="execute_order_66"
+            android:text="@string/button_execute_order_66"
             android:textAllCaps="false"
             android:textSize="18sp" />
 

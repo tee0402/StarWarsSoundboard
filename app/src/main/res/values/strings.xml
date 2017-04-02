@@ -219,5 +219,10 @@
     <string name="button_i_loved_you">I loved you!</string>
     <string name="button_anakin_screams">*Anakin screams*</string>
     <string name="button_a_surprise_to_be_sure_but_a_welcome_one">A surprise, to be sure, but a welcome one</string>
+    <string name="button_wow_what_do_you_know">Wow! What do you know?</string>
     <string name="button_magnificent_arent_they">Magnificent, aren\'t they?</string>
+    <string name="button_it_is_with_great_reluctance_that_i_have_agreed_to_this_calling">It is with great reluctance that I have agreed to this calling</string>
+    <string name="button_this_is_where_the_fun_begins">This is where the fun begins</string>
+    <string name="button_the_time_has_come">The time has come</string>
+    <string name="button_execute_order_66">Execute Order 66</string>
 </resources>
