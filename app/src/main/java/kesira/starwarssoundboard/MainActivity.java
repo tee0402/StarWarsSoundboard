@@ -2,12 +2,14 @@ package kesira.starwarssoundboard;
 
 import android.content.Context;
 import android.media.MediaPlayer;
-import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
-import android.support.v4.view.ViewPager;
-import android.support.v7.app.AppCompatActivity;
+import com.google.android.material.tabs.TabLayout;
+
+import androidx.annotation.NonNull;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.viewpager.widget.ViewPager;
+import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -23,7 +25,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity {
 
     public String bTag;
     public ArrayList<String> favorites = new ArrayList<>();
@@ -34,10 +36,10 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
+        ViewPager viewPager = findViewById(R.id.viewpager);
         setupViewPager(viewPager);
 
-        TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs);
+        TabLayout tabLayout = findViewById(R.id.tabs);
         tabLayout.setupWithViewPager(viewPager);
 
         try {
@@ -96,12 +98,7 @@ public class MainActivity extends AppCompatActivity{
         Button b = (Button) v;
         String sound = b.getTag().toString();
         MediaPlayer mp = MediaPlayer.create(this, getResources().getIdentifier(sound,"raw",getPackageName()));
-        mp.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
-            @Override
-            public void onCompletion(MediaPlayer mediaPlayer) {
-                mediaPlayer.release();
-            }
-        });
+        mp.setOnCompletionListener(MediaPlayer::release);
         mp.start();
     }
 
@@ -120,7 +117,7 @@ public class MainActivity extends AppCompatActivity{
         viewPager.setAdapter(adapter);
     }
 
-    private class ViewPagerAdapter extends FragmentPagerAdapter {
+    private static class ViewPagerAdapter extends FragmentPagerAdapter {
         private final ArrayList<Fragment> mFragmentList = new ArrayList<>();
         private final ArrayList<String> mFragmentTitleList = new ArrayList<>();
 
@@ -133,6 +130,7 @@ public class MainActivity extends AppCompatActivity{
             mFragmentTitleList.add(title);
         }
 
+        @NonNull
         @Override
         public Fragment getItem(int position) {
             return mFragmentList.get(position);
@@ -149,7 +147,7 @@ public class MainActivity extends AppCompatActivity{
         }
 
         @Override
-        public int getItemPosition(Object o) {
+        public int getItemPosition(@NonNull Object o) {
             return POSITION_NONE;
         }
     }
