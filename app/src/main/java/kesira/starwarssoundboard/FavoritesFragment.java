@@ -30,40 +30,42 @@ public class FavoritesFragment extends Fragment {
         context = v.getContext();
 
         mainActivity = (MainActivity) requireActivity();
-        favorites = mainActivity.favorites;
+        favorites = mainActivity.favorites.getFavorites();
         addButtons();
 
         return v;
-    }
-
-    private void addButtons() {
-        int numFavorites = favorites.size();
-        for (int i = 0; i < numFavorites; i++) {
-            Button b = new Button(context);
-            if (i != numFavorites - 1) {
-                LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-                lp.setMargins(0, 0, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, context.getResources().getDisplayMetrics()));
-                b.setLayoutParams(lp);
-            }
-            b.setTag(favorites.get(i));
-            b.setText(getResources().getIdentifier("@string/button_" + favorites.get(i), "string", context.getPackageName()));
-            b.setAllCaps(false);
-            b.setTextSize(18);
-            b.setOnClickListener(mainActivity::playSound);
-            registerForContextMenu(b);
-            ll.addView(b);
-        }
     }
 
     @Override
     public void onCreateContextMenu(@NonNull ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         MenuInflater inflater = mainActivity.getMenuInflater();
         inflater.inflate(R.menu.context_menu_remove, menu);
-        mainActivity.bTag = String.valueOf(v.getTag());
+        mainActivity.tagSelected = String.valueOf(v.getTag());
     }
 
     void refresh() {
         ll.removeAllViews();
         addButtons();
+    }
+
+    private void addButtons() {
+        int numFavorites = favorites.size();
+        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        lp.setMargins(0, 0, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, context.getResources().getDisplayMetrics()));
+        String packageName = context.getPackageName();
+        for (int i = 0; i < numFavorites; i++) {
+            Button b = new Button(context);
+            if (i != numFavorites - 1) {
+                b.setLayoutParams(lp);
+            }
+            String favorite = favorites.get(i);
+            b.setTag(favorite);
+            b.setText(getResources().getIdentifier("@string/button_" + favorite, "string", packageName));
+            b.setAllCaps(false);
+            b.setTextSize(18);
+            b.setOnClickListener(mainActivity::playSound);
+            registerForContextMenu(b);
+            ll.addView(b);
+        }
     }
 }
