@@ -3,12 +3,12 @@ package kesira.starwarssoundboard;
 import android.content.Context;
 import android.media.MediaPlayer;
 import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentPagerAdapter;
-import androidx.viewpager.widget.ViewPager;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+import androidx.viewpager2.widget.ViewPager2;
 import androidx.appcompat.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -26,30 +26,44 @@ import java.io.OutputStreamWriter;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+    String bTag;
+    ArrayList<String> favorites = new ArrayList<>();
+    private final FavoritesFragment favoritesFragment = new FavoritesFragment();
+    private final FragmentStateAdapter adapter = new FragmentStateAdapter(this) {
+        private final Fragment[] fragments = {favoritesFragment, new OneFragment(), new TwoFragment(), new ThreeFragment(), new FourFragment(),
+                new FiveFragment(), new SixFragment(), new SevenFragment(), new EightFragment(), new NineFragment()};
+        @NonNull
+        @Override
+        public Fragment createFragment(int position) {
+            return fragments[position];
+        }
 
-    public String bTag;
-    public ArrayList<String> favorites = new ArrayList<>();
-    private ViewPagerAdapter adapter;
+        @Override
+        public int getItemCount() {
+            return 10;
+        }
+    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        ViewPager viewPager = findViewById(R.id.viewpager);
-        setupViewPager(viewPager);
+        ViewPager2 viewPager = findViewById(R.id.viewpager);
+        viewPager.setAdapter(adapter);
 
         TabLayout tabLayout = findViewById(R.id.tabs);
-        tabLayout.setupWithViewPager(viewPager);
+        String[] titles = {"Favorites", "Obi-Wan and Anakin vs. Dooku", "Grievous' Ship", "Tragedy of Darth Plagueis", "Utapau",
+                "Palpatine Reveals Himself", "Mace Windu vs. Palpatine", "Mustafar and Palpatine's Speech", "Anakin vs. Obi-Wan", "Others"};
+        new TabLayoutMediator(tabLayout, viewPager, (tab, position) -> tab.setText(titles[position])).attach();
 
         try {
-            InputStream inputStream = this.openFileInput("favorites.txt");
+            InputStream inputStream = openFileInput("favorites.txt");
             if (inputStream != null) {
-                InputStreamReader inputStreamReader = new InputStreamReader(inputStream);
-                BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
-                String str;
-                while ((str = bufferedReader.readLine()) != null) {
-                    favorites.add(str);
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+                String line;
+                while ((line = bufferedReader.readLine()) != null) {
+                    favorites.add(line);
                 }
                 inputStream.close();
             }
@@ -60,32 +74,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     @Override
-    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
-        super.onCreateContextMenu(menu, v, menuInfo);
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.context_menu_add, menu);
-        bTag = v.getTag().toString();
-    }
-
-    @Override
-    public boolean onContextItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.add && !favorites.contains(bTag)) {
-            favorites.add(bTag);
-        }
-        else if (item.getItemId() == R.id.remove) {
-            favorites.remove(bTag);
-        }
-        adapter.notifyDataSetChanged();
-        return true;
-    }
-
-    @Override
     protected void onPause() {
         super.onPause();
         try {
-            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(this.openFileOutput("favorites.txt", Context.MODE_PRIVATE));
-            for (int i = 0; i < favorites.size(); i++) {
-                outputStreamWriter.write(favorites.get(i) + "\n");
+            OutputStreamWriter outputStreamWriter = new OutputStreamWriter(openFileOutput("favorites.txt", Context.MODE_PRIVATE));
+            for (String favorite : favorites) {
+                outputStreamWriter.write(favorite + "\n");
             }
             outputStreamWriter.close();
         }
@@ -94,61 +88,31 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.context_menu_add, menu);
+        bTag = String.valueOf(v.getTag());
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+        if (item.getItemId() == R.id.add && !favorites.contains(bTag)) {
+            favorites.add(bTag);
+        } else if (item.getItemId() == R.id.remove) {
+            favorites.remove(bTag);
+        }
+        if (favoritesFragment.isAdded()) {
+            favoritesFragment.refresh();
+        }
+        return true;
+    }
+
     public void playSound(View v) {
         Button b = (Button) v;
-        String sound = b.getTag().toString();
-        MediaPlayer mp = MediaPlayer.create(this, getResources().getIdentifier(sound,"raw",getPackageName()));
+        String sound = String.valueOf(b.getTag());
+        MediaPlayer mp = MediaPlayer.create(this, getResources().getIdentifier(sound, "raw", getPackageName()));
         mp.setOnCompletionListener(MediaPlayer::release);
         mp.start();
-    }
-
-    private void setupViewPager(ViewPager viewPager) {
-        adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFragment(new FavoritesFragment(), "Favorites");
-        adapter.addFragment(new OneFragment(), "Obi-Wan and Anakin vs. Dooku");
-        adapter.addFragment(new TwoFragment(), "Grievous' Ship");
-        adapter.addFragment(new ThreeFragment(), "Tragedy of Darth Plagueis");
-        adapter.addFragment(new FourFragment(), "Utapau");
-        adapter.addFragment(new FiveFragment(), "Palpatine Reveals Himself");
-        adapter.addFragment(new SixFragment(), "Mace Windu vs. Palpatine");
-        adapter.addFragment(new SevenFragment(), "Mustafar and Palpatine's Speech");
-        adapter.addFragment(new EightFragment(), "Anakin vs. Obi-Wan");
-        adapter.addFragment(new NineFragment(), "Others");
-        viewPager.setAdapter(adapter);
-    }
-
-    private static class ViewPagerAdapter extends FragmentPagerAdapter {
-        private final ArrayList<Fragment> mFragmentList = new ArrayList<>();
-        private final ArrayList<String> mFragmentTitleList = new ArrayList<>();
-
-        private ViewPagerAdapter(FragmentManager manager) {
-            super(manager);
-        }
-
-        private void addFragment(Fragment fragment, String title) {
-            mFragmentList.add(fragment);
-            mFragmentTitleList.add(title);
-        }
-
-        @NonNull
-        @Override
-        public Fragment getItem(int position) {
-            return mFragmentList.get(position);
-        }
-
-        @Override
-        public int getCount() {
-            return mFragmentList.size();
-        }
-
-        @Override
-        public CharSequence getPageTitle(int position) {
-            return mFragmentTitleList.get(position);
-        }
-
-        @Override
-        public int getItemPosition(@NonNull Object o) {
-            return POSITION_NONE;
-        }
     }
 }

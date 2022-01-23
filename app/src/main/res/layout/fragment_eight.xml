@@ -7,15 +7,14 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:paddingVertical="11dp"
+        android:paddingHorizontal="16dp">
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="11dp"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
             android:tag="i_love_you"
@@ -400,7 +399,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="11dp"
             android:onClick="playSound"
             android:tag="anakin_screams"
             android:text="@string/button_anakin_screams"

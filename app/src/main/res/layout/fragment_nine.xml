@@ -7,15 +7,14 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:paddingVertical="11dp"
+        android:paddingHorizontal="16dp">
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="11dp"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
             android:tag="a_surprise_to_be_sure_but_a_welcome_one"
@@ -88,7 +87,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="11dp"
             android:onClick="playSound"
             android:tag="execute_order_66"
             android:text="@string/button_execute_order_66"

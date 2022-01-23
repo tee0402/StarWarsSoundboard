@@ -10,11 +10,6 @@ import android.widget.Button;
 public class FiveFragment extends Fragment {
 
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
-
-    @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_five, container, false);
         for (int i = 1; i <= 42; i++) {

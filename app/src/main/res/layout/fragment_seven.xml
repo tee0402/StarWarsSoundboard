@@ -7,15 +7,14 @@
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingLeft="16dp"
-        android:paddingRight="16dp">
+        android:paddingVertical="11dp"
+        android:paddingHorizontal="16dp">
 
         <Button
             android:id="@+id/button1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginTop="11dp"
             android:layout_marginBottom="5dp"
             android:onClick="playSound"
             android:tag="welcome_lord_vader_weve_been_expecting_you"
@@ -100,7 +99,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:layout_marginBottom="11dp"
             android:onClick="playSound"
             android:tag="the_war_is_over_lord_sidious_promised_us_peace_we_only_want_ahhhhhhh"
             android:text="@string/button_the_war_is_over_lord_sidious_promised_us_peace_we_only_want_ahhhhhhh"
