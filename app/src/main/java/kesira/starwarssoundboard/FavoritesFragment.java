@@ -1,6 +1,7 @@
 package kesira.starwarssoundboard;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -50,8 +51,9 @@ public class FavoritesFragment extends Fragment {
 
     private void addButtons() {
         int numFavorites = favorites.size();
+        Resources resources = getResources();
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(0, 0, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, context.getResources().getDisplayMetrics()));
+        lp.setMargins(0, 0, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, resources.getDisplayMetrics()));
         String packageName = context.getPackageName();
         for (int i = 0; i < numFavorites; i++) {
             Button b = new Button(context);
@@ -60,7 +62,7 @@ public class FavoritesFragment extends Fragment {
             }
             String favorite = favorites.get(i);
             b.setTag(favorite);
-            b.setText(getResources().getIdentifier("@string/button_" + favorite, "string", packageName));
+            b.setText(resources.getIdentifier("@string/button_" + favorite, "string", packageName));
             b.setAllCaps(false);
             b.setTextSize(18);
             b.setOnClickListener(mainActivity::playSound);

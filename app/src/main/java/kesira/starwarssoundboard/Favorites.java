@@ -31,7 +31,7 @@ class Favorites {
         } catch (FileNotFoundException e) {
             write();
         } catch (IOException e) {
-            Log.e("Exception", "Reading from saved favorites failed: " + e.toString());
+            Log.e("Exception", "Reading from saved favorites failed: " + e);
         }
     }
 
@@ -43,7 +43,7 @@ class Favorites {
             }
             outputStreamWriter.close();
         } catch (IOException e) {
-            Log.e("Exception", "Writing to saved favorites failed: " + e.toString());
+            Log.e("Exception", "Writing to saved favorites failed: " + e);
         }
     }
 

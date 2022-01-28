@@ -22,20 +22,6 @@ public class MainActivity extends AppCompatActivity {
     String tagSelected;
     Favorites favorites = new Favorites(this);
     private final FavoritesFragment favoritesFragment = new FavoritesFragment();
-    private final FragmentStateAdapter adapter = new FragmentStateAdapter(this) {
-        private final Fragment[] fragments = {favoritesFragment, new FragmentOne(), new FragmentTwo(), new FragmentThree(), new FragmentFour(),
-                new FragmentFive(), new FragmentSix(), new FragmentSeven(), new FragmentEight(), new FragmentNine()};
-        @NonNull
-        @Override
-        public Fragment createFragment(int position) {
-            return fragments[position];
-        }
-
-        @Override
-        public int getItemCount() {
-            return 10;
-        }
-    };
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,8 +29,20 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         ViewPager2 viewPager = findViewById(R.id.viewpager);
-        viewPager.setAdapter(adapter);
+        viewPager.setAdapter(new FragmentStateAdapter(this) {
+            private final Fragment[] fragments = {favoritesFragment, new FragmentOne(), new FragmentTwo(), new FragmentThree(), new FragmentFour(),
+                    new FragmentFive(), new FragmentSix(), new FragmentSeven(), new FragmentEight(), new FragmentNine()};
+            @NonNull
+            @Override
+            public Fragment createFragment(int position) {
+                return fragments[position];
+            }
 
+            @Override
+            public int getItemCount() {
+                return 10;
+            }
+        });
         TabLayout tabLayout = findViewById(R.id.tabs);
         String[] titles = {"Favorites", "Obi-Wan and Anakin vs. Dooku", "Grievous' Ship", "Tragedy of Darth Plagueis", "Utapau",
                 "Palpatine Reveals Himself", "Mace Windu vs. Palpatine", "Mustafar and Palpatine's Speech", "Anakin vs. Obi-Wan", "Others"};
@@ -62,9 +60,10 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
-        if (item.getItemId() == R.id.add) {
+        int itemID = item.getItemId();
+        if (itemID == R.id.add) {
             favorites.add(tagSelected);
-        } else if (item.getItemId() == R.id.remove) {
+        } else if (itemID == R.id.remove) {
             favorites.remove(tagSelected);
         }
         if (favoritesFragment.isAdded()) {
@@ -74,8 +73,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void playSound(View v) {
-        Button b = (Button) v;
-        String tagClicked = String.valueOf(b.getTag());
+        String tagClicked = String.valueOf(v.getTag());
         MediaPlayer mp = MediaPlayer.create(this, getResources().getIdentifier(tagClicked, "raw", getPackageName()));
         mp.setOnCompletionListener(MediaPlayer::release);
         mp.start();
