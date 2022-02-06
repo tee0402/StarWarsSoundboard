@@ -6,7 +6,6 @@ import android.util.Log;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.ArrayList;
@@ -21,17 +20,38 @@ class Favorites {
 
     void read() {
         try {
-            InputStream inputStream = context.openFileInput("favorites.txt");
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.openFileInput("favorites.txt")));
             String line;
             while ((line = bufferedReader.readLine()) != null) {
                 favorites.add(line);
             }
-            inputStream.close();
+            bufferedReader.close();
         } catch (FileNotFoundException e) {
             write();
         } catch (IOException e) {
             Log.e("Exception", "Reading from saved favorites failed: " + e);
+        }
+    }
+
+    int size() {
+        return favorites.size();
+    }
+
+    String get(int index) {
+        return favorites.get(index);
+    }
+
+    void add(String favorite) {
+        if (!favorites.contains(favorite)) {
+            favorites.add(favorite);
+            write();
+        }
+    }
+
+    void remove(String favorite) {
+        if (favorites.contains(favorite)) {
+            favorites.remove(favorite);
+            write();
         }
     }
 
@@ -45,21 +65,5 @@ class Favorites {
         } catch (IOException e) {
             Log.e("Exception", "Writing to saved favorites failed: " + e);
         }
-    }
-
-    void add(String favorite) {
-        if (!favorites.contains(favorite)) {
-            favorites.add(favorite);
-            write();
-        }
-    }
-
-    void remove(String favorite) {
-        favorites.remove(favorite);
-        write();
-    }
-
-    ArrayList<String> getFavorites() {
-        return favorites;
     }
 }
