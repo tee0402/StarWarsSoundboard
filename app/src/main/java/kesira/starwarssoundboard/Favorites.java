@@ -16,9 +16,6 @@ class Favorites {
 
     Favorites(Context context) {
         this.context = context;
-    }
-
-    void read() {
         try {
             BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(context.openFileInput("favorites.txt")));
             String line;

@@ -26,7 +26,7 @@ public class FavoritesFragment extends Fragment {
         context = v.getContext();
 
         mainActivity = (MainActivity) requireActivity();
-        favorites = mainActivity.favorites;
+        favorites = mainActivity.getFavorites();
         addButtons();
 
         return v;
@@ -35,7 +35,7 @@ public class FavoritesFragment extends Fragment {
     @Override
     public void onCreateContextMenu(@NonNull ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
         mainActivity.getMenuInflater().inflate(R.menu.context_menu_remove, menu);
-        mainActivity.tagSelected = String.valueOf(v.getTag());
+        mainActivity.setTagSelected(v.getTag().toString());
     }
 
     void refresh() {
@@ -44,13 +44,13 @@ public class FavoritesFragment extends Fragment {
     }
 
     private void addButtons() {
+        LinearLayout.LayoutParams bottomMargin = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        bottomMargin.setMargins(0, 0, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, MainActivity.resources.getDisplayMetrics()));
         int numFavorites = favorites.size();
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(0, 0, 0, (int) TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, 5, MainActivity.resources.getDisplayMetrics()));
         for (int i = 0; i < numFavorites; i++) {
             Button b = new Button(context);
             if (i != numFavorites - 1) {
-                b.setLayoutParams(lp);
+                b.setLayoutParams(bottomMargin);
             }
             String favorite = favorites.get(i);
             b.setTag(favorite);
